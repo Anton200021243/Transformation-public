@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveForward : MonoBehaviour
+public class MovingLocal : MonoBehaviour
 {
     [SerializeField] private float _speed;
 
@@ -11,7 +11,7 @@ public class MoveForward : MonoBehaviour
         Move();
     }
 
-    public void Move()
+    private void Move()
     {
         transform.Translate(Vector3.forward * _speed * Time.deltaTime);
     }

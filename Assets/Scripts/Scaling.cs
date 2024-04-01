@@ -5,14 +5,14 @@ using UnityEngine;
 public class Scaling : MonoBehaviour
 {
     [SerializeField] private float _scalingSpeed;
-    private Vector3 _scalingDirection = new Vector3(1, 1, 1);
+    private Vector3 _scalingDirection = Vector3.one;
 
-    void Update()
+    private void Update()
     {
         Scale();
     }
 
-    public void Scale()
+    private void Scale()
     {
         transform.localScale += _scalingDirection * _scalingSpeed * Time.deltaTime;
     }
